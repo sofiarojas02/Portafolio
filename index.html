@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sofia Rojas — Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#inicio" class="nav-name">Sofia Rojas</a>
+  <ul class="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#habilidades">Habilidades</a></li>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="Sofia_Rojas_CV_D.pdf" class="nav-cv" download>↓ Descargar CV</a></li>
+  </ul>
+</nav>
+
+<!-- INICIO / HERO -->
+<section id="inicio">
+  <div>
+    <span class="hero-tag reveal">Frontend Developer</span>
+    <h1 class="hero-name reveal reveal-d1">Sofia<br/><span>Rojas</span></h1>
+    <p class="hero-role reveal reveal-d1">Desarrolladora Frontend · Egresada de Informática </p>
+    <p class="hero-desc reveal reveal-d2">Construyo interfaces limpias, accesibles y con atención al detalle. Me apasiona convertir ideas en experiencias digitales que las personas disfrutan usar.</p>
+    <div class="hero-actions reveal reveal-d3">
+      <a href="#proyectos" class="btn-primary">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Ver proyectos
+      </a>
+      <a href="#contacto" class="btn-outline">Contáctame</a>
+    </div>
+  </div>
+
+  <div class="reveal reveal-d2">
+    <div class="hero-card">
+      <p class="hero-card-tag">✦ Proyecto destacado</p>
+      <h3>Task Reminder App</h3>
+      <p>Aplicación de gestión de tareas con recordatorios, prioridades y una interfaz intuitiva construida con React. Desplegada en GitHub Pages.</p>
+      <a href="https://sofiarojas02.github.io/task-reminder-react-router/#/" target="_blank" class="hero-card-link">
+        Ver proyecto en vivo
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <div class="hero-tech-stack">
+        <span class="tech-badge">React.js</span>
+        <span class="tech-badge">React Router</span>
+        <span class="tech-badge">JavaScript ES6+</span>
+        <span class="tech-badge">CSS3</span>
+        <span class="tech-badge">GitHub Pages</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <p class="section-label reveal initial-text">Portafolio</p>
+  <h2 class="section-title reveal">Proyectos</h2>
+  <div class="section-divider reveal"></div>
+
+  <div class="projects-grid">
+    
+    <div class="project-card reveal" onclick="window.open('https://sofiarojas02.github.io/SofiFy/', '_blank')">
+      <div class="project-thumb">🎵</div>
+      <div class="project-info">
+        <p class="project-type">Clone · Streaming</p>
+        <h3>Spotify Clone</h3>
+        <p>Réplica funcional de la interfaz de Spotify con reproductor de música, listas de reproducción y diseño responsive.</p>
+        <div class="card_info--details">
+            <h6>Informacion Técnica</h6>
+            <ul>
+                <li>useState</li>
+                <li>useEffect</li>
+                <li>useRef</li>
+                <li>useContext</li>
+            </ul>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">React</span>
+          <span class="project-tag">LocalStorage</span>
+          <span class="project-tag">HTML5</span>
+          <span class="project-tag">CSS3</span>
+          <span class="project-tag">JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://sofiarojas02.github.io/SofiFy/" target="_blank" class="project-link">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Demo en vivo
+          </a>
+          <a href="https://github.com/sofiarojas02/SofiFy" target="_blank" class="project-link">
+            <svg width="11" height="11" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            Código
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-d1" onclick="window.open('https://sofiarojas02.github.io/task-reminder-react-router/', '_blank')">
+      <div class="project-thumb">📋</div>
+      <div class="project-info">
+        <p class="project-type">App · Productividad</p>
+        <h3>Task Reminder</h3>
+        <p>Aplicación de gestión de tareas con recordatorios por fecha, categorías, prioridades y almacenamiento local.</p>
+        <div class="card_info--details">
+            <h6>Informacion Técnica</h6>
+            <ul>
+                <li>useState</li>
+                <li>useEffect</li>
+                <li>useContext</li>
+                <li>Bootstrap</li>
+            </ul>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">React</span>
+          <span class="project-tag">React Router</span>
+          <span class="project-tag">HTML5</span>
+          <span class="project-tag">CSS3</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">LocalStorage</span>
+          <span class="project-tag">Hooks</span>
+        </div>
+        <div class="project-links">
+          <a href="https://sofiarojas02.github.io/task-reminder-react-router/#/" target="_blank" class="project-link">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Demo en vivo
+          </a>
+          <a href="https://github.com/sofiarojas02/task-reminder-react-router" target="_blank" class="project-link">
+            <svg width="11" height="11" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            Código
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HABILIDADES -->
+<section id="habilidades">
+  <p class="section-label reveal initial-text">Stack técnico</p>
+  <h2 class="section-title reveal">Habilidades</h2>
+  <div class="section-divider reveal"></div>
+
+  <div class="skills-layout">
+    <div>
+      <div class="skills-category reveal">
+        <p class="skills-cat-title">Frontend</p>
+        <div class="skills-chips">
+          <div class="skill-chip">⚛️ React.js</div>
+          <div class="skill-chip">🟨 JavaScript ES6+</div>
+          <div class="skill-chip">🌐 HTML5</div>
+          <div class="skill-chip">🎨 CSS3</div>
+          <div class="skill-chip">🎨 Bootstrap</div>
+          <div class="skill-chip">📦 Redux</div>
+        </div>
+      </div>
+      <div class="skills-category reveal reveal-d1">
+        <p class="skills-cat-title">Herramientas</p>
+        <div class="skills-chips">
+          <div class="skill-chip">🔀 Git & GitHub</div>
+          <div class="skill-chip">⚡ Next.js</div>
+          <div class="skill-chip">🧪 npm </div>
+          <div class="skill-chip">💻 VS Code</div>
+        </div>
+      </div>
+      <div class="skills-category reveal reveal-d2">
+        <p class="skills-cat-title">Metodologías</p>
+        <div class="skills-chips">
+          <div class="skill-chip">📱 Responsive Design</div>
+          <div class="skill-chip">♿ Accesibilidad</div>
+          <div class="skill-chip">🔧 Clean Code</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal reveal-d1">
+      <div class="skills-visual">
+        <h3>Certificaciones</h3>
+        <p>Platzi · 2024</p>
+        <div class="cert-item">
+          <div class="cert-icon">🎓</div>
+          <div class="cert-info">
+            <strong>Frontend Development</strong>
+            <span>Platzi — Certificación profesional</span>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">⚛️</div>
+          <div class="cert-info">
+            <strong>React.js Profesional</strong>
+            <span>Platzi — Desarrollo de aplicaciones</span>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">🗃️</div>
+          <div class="cert-info">
+            <strong>State Management en React</strong>
+            <span>Platzi — Gestión de estado profesional</span>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">🎓</div>
+          <div class="cert-info">
+            <strong>TSU en Informática</strong>
+            <span>UPTM — Venezuela</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi">
+  <p class="section-label reveal initial-text">Quién soy</p>
+  <h2 class="section-title reveal">Sobre mí</h2>
+  <div class="section-divider reveal"></div>
+
+  <div class="about-layout">
+    <div class="about-photo-wrap reveal">
+      <div class="about-photo-placeholder">👩🏻‍💻</div>
+
+    </div>
+
+    <div class="about-content reveal reveal-d1">
+      <p>¡Hola! Soy <strong>Sofía Rojas</strong> , programadora y desarrolladora frontend residente de Mérida, Venezuela. Me dedico al desarrollo de software y a la investigación técnica, especializándome en la creación de interfaces web modernas, interactivas y eficientes.</p>
+      <p>Cuento con el título de Técnico Superior Universitario (TSU) en Informática. Construyo interfaces con React, JavaScript y CSS pensando siempre en el usuario final, combinando la lógica del código con el diseño visual para construir soluciones digitales de alto impacto.</p>
+      <div class="about-meta">
+        <div class="meta-item">
+          <p class="meta-label">Ubicación</p>
+          <p class="meta-value">Venezuela 🇻🇪</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Disponibilidad</p>
+          <p class="meta-value"> · Remoto</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Idiomas</p>
+          <p class="meta-value">Español (nativo)</p>
+          <p class="meta-value">Ingles (basico)</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Enfoque</p>
+          <p class="meta-value">Frontend · React</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <p class="section-label reveal">Trabajemos juntos</p>
+  <h2 class="section-title reveal">Contacto</h2>
+  <div class="section-divider reveal"></div>
+
+  <p class="contact-desc reveal">¿Tienes un proyecto en mente o buscas sumar una desarrolladora frontend a tu equipo? Escríbeme.</p>
+
+<div class="reveal">
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sofiarojas.dev@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-email">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    sofiarojas.dev@gmail.com
+  </a>
+</div>
+
+  <div class="social-links reveal reveal-d1">
+    <a href="https://github.com/sofiarojas02" target="_blank" class="social-link" aria-label="GitHub">
+      <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/sofía-rojas02" target="_blank" class="social-link" aria-label="LinkedIn">
+      <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://instagram.com/isofiarojas" target="_blank" class="social-link" aria-label="Instagram">
+      <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+  </div>
+
+  <p class="footer-note reveal">© 2025 Sofia Rojas — Diseñado con 💜</p>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
