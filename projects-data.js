@@ -21,6 +21,17 @@ const projects = [
     demoUrl: 'https://sofiarojas02.github.io/task-reminder-react-router/#/',
     codeUrl: 'https://github.com/sofiarojas02/task-reminder-react-router'
   },
+    {
+    emoji: '🎬',
+    type: 'Catálogo · API',
+    title: 'SofiMovies',
+    description: 'Catálogo de películas conectado a la API de The Movie Database (TMDB), con tendencias, categorías, búsqueda y detalle de cada película con recomendaciones, todo navegado mediante rutas por hash sin recargar la página.',
+    techTitle: 'Información Técnica',
+    techInfo: ['Fetch/Axios a API REST', 'Ruteo por hash (SPA)', 'Manipulación del DOM'],
+    tags: ['JavaScript', 'Axios', 'TMDB API', 'HTML5', 'CSS3'],
+    demoUrl: 'https://sofiarojas02.github.io/consumo-api-movie/',
+    codeUrl: 'https://github.com/sofiarojas02/consumo-api-movie'
+  },
   {
     emoji: '⚡',
     type: 'Catálogo · E-commerce',
