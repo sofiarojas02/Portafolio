@@ -1,0 +1,70 @@
+    /* CONTACT SECTION */
+    #contact {
+      padding: 8rem 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(74, 14, 100, 0.1) 0%, rgba(25, 42, 86, 0.1) 100%);
+      border-radius: 20px;
+      margin: 4rem 2rem;
+    }
+
+    #contact h2 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-desc {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1.2rem 2rem;
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+      color: var(--text-primary);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .contact-email:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px var(--glow-purple);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .social-link {
+      width: 50px;
+      height: 50px;
+      border: 1px solid var(--border-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-link:hover {
+      background: var(--accent-purple);
+      border-color: var(--accent-purple);
+      color: var(--text-primary);
+      transform: translateY(-5px);
+    }
+
