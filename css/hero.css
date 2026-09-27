@@ -151,3 +151,21 @@
       color: var(--text-secondary);
       line-height: 1.6;
     }
+
+
+@media (max-width: 768px) {
+  .hero-section{
+    padding: 10rem;
+  }
+  
+  #hero{
+    margin: 0;
+  }
+
+    .floating-card {
+      display: none;
+    }
+
+
+
+}

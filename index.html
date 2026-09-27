@@ -18,19 +18,26 @@
 
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav>
-    <div class="nav-brand">Sofia Rojas</div>
-    <ul class="nav-links">
-      <li><a href="#hero">Inicio</a></li>
-      <li><a href="#skills-education">Habilidades</a></li>
-      <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#contact">Contacto</a></li>
-      <li><a href="CV_I_Sofia_Rojas.pdf" class="nav-cv" download>↓ CV</a></li>
-    </ul>
-  </nav>
-
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-brand">Sofia Rojas</div>
+ 
+   <button class="hamburger" id="hamburger" type="button">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+ 
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Inicio</a></li>
+    <li><a href="#skills-education">Habilidades</a></li>
+    <li><a href="#projects">Proyectos</a></li>
+    <li><a href="#about">Sobre mí</a></li>
+    <li><a href="#contact">Contacto</a></li>
+    <li><a href="CV_I_Sofia_Rojas.pdf" class="nav-cv" download>↓ CV</a></li>
+  </ul>
+ 
+</nav>
   <!-- HERO SECTION -->
   <section id="hero" class="hero-section">
     <div class="hero-content">
@@ -183,5 +190,7 @@
   <script src="js/render-projects.js"></script>
   <script src="js/skills-data.js"></script>
   <script src="js/skills-render.js"></script>
+
+  <script src="js/responsive.js"></script>
 </body>
 </html>
