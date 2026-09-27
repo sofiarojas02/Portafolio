@@ -1,9 +1,9 @@
 const projects = [
   {
     emoji: '🎵',
-    type: 'Clone · Streaming',
-    title: 'Spotify Clone',
-    description: 'Réplica funcional de la interfaz de Spotify con reproductor de música, listas de reproducción y diseño responsive.',
+    type: 'Clone · Streaming ',
+    title: 'Spotify Clone ',
+    description: 'Réplica funcional de la interfaz de Spotify con reproductor de música, listas de reproducción y diseño para pc.',
     techTitle: 'Información Técnica',
     techInfo: ['useState', 'useEffect', 'useRef', 'useContext'],
     tags: ['React', 'LocalStorage', 'HTML5', 'CSS3', 'JavaScript'],
