@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const projectsGrid = document.querySelector('.projects-grid');
+  const projectsContainer = document.querySelector('.projects-container');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
 
-  if (!projectsGrid) return;
+  if (!projectsGrid || !projectsContainer) return;
 
   projectsGrid.innerHTML = '';
 
@@ -49,50 +50,156 @@ document.addEventListener('DOMContentLoaded', () => {
     projectsGrid.appendChild(card);
   });
 
-  // Lógica del carrusel
+  // ==================== VARIABLES DEL CARRUSEL ====================
   let currentIndex = 0;
+  let isMobile = window.innerWidth <= 768;
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
 
+  // ==================== FUNCIONES HELPER ====================
   function getVisibleCards() {
-    if (window.innerWidth <= 640) return 1;
-    if (window.innerWidth <= 992) return 2;
+    if (window.innerWidth <= 480) return 1;
+    if (window.innerWidth <= 768) return 1;
+    if (window.innerWidth <= 1024) return 2;
     return 3;
   }
 
+  function isMobileView() {
+    return window.innerWidth <= 768;
+  }
+
+  // ==================== ACTUALIZAR CARRUSEL ====================
   function updateCarousel() {
     const cards = document.querySelectorAll('.project-card');
     if (cards.length === 0) return;
 
-    const visibleCards = getVisibleCards();
-    const maxIndex = cards.length - visibleCards;
+    isMobile = isMobileView();
 
-    if (currentIndex > maxIndex) currentIndex = maxIndex;
-    if (currentIndex < 0) currentIndex = 0;
+    if (isMobile) {
+      // En móvil, usar scroll nativo (no transform)
+      projectsContainer.scrollLeft = 0;
+      // Los botones están ocultos en móvil
+    } else {
+      // En desktop, usar transform
+      const visibleCards = getVisibleCards();
+      const maxIndex = Math.max(0, cards.length - visibleCards);
 
-    const gap = 24;
-    const cardWidth = cards[0].getBoundingClientRect().width;
-    const moveAmount = (cardWidth + gap) * currentIndex;
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
+      if (currentIndex < 0) currentIndex = 0;
 
-    projectsGrid.style.transform = `translateX(-${moveAmount}px)`;
+      const gap = 24;
+      const cardWidth = cards[0].getBoundingClientRect().width;
+      const moveAmount = (cardWidth + gap) * currentIndex;
 
-    prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex >= maxIndex;
+      projectsGrid.style.transform = `translateX(-${moveAmount}px)`;
+
+      // Actualizar estado de botones
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex >= maxIndex;
+    }
   }
 
-  prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
+  // ==================== LÓGICA DEL CARRUSEL EN DESKTOP ====================
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      const visibleCards = getVisibleCards();
+      if (currentIndex < projects.length - visibleCards) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+  }
+
+  // ==================== SOPORTE TÁCTIL (SWIPE) PARA MÓVIL ====================
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  projectsContainer.addEventListener(
+    'touchstart',
+    (e) => {
+      if (isMobileView()) {
+        touchStartX = e.changedTouches[0].screenX;
+      }
+    },
+    false
+  );
+
+  projectsContainer.addEventListener(
+    'touchend',
+    (e) => {
+      if (isMobileView()) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }
+    },
+    false
+  );
+
+  function handleSwipe() {
+    const swipeThreshold = 50; // Mínimo de píxeles para considerar un swipe
+    const diff = touchStartX - touchEndX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        // Swipe izquierda - siguiente
+        scrollToNextCard();
+      } else {
+        // Swipe derecha - anterior
+        scrollToPrevCard();
+      }
     }
+  }
+
+  function scrollToPrevCard() {
+    const cards = document.querySelectorAll('.project-card');
+    if (cards.length === 0) return;
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 16; // gap en móvil
+    const scrollAmount = cardWidth + gap;
+    const currentScroll = projectsContainer.scrollLeft;
+
+    if (currentScroll > 0) {
+      projectsContainer.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  }
+
+  function scrollToNextCard() {
+    const cards = document.querySelectorAll('.project-card');
+    if (cards.length === 0) return;
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 16;
+    const scrollAmount = cardWidth + gap;
+    const maxScroll =
+      projectsGrid.offsetWidth - projectsContainer.offsetWidth;
+    const currentScroll = projectsContainer.scrollLeft;
+
+    if (currentScroll < maxScroll) {
+      projectsContainer.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  }
+
+  // ==================== ACTUALIZAR AL CAMBIAR TAMAÑO ====================
+  window.addEventListener('resize', () => {
+    currentIndex = 0;
+    updateCarousel();
   });
 
-  nextBtn.addEventListener('click', () => {
-    const visibleCards = getVisibleCards();
-    if (currentIndex < projects.length - visibleCards) {
-      currentIndex++;
-      updateCarousel();
-    }
-  });
-
-  window.addEventListener('resize', updateCarousel);
+  // Inicializar carrusel
   updateCarousel();
 });

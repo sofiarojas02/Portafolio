@@ -145,3 +145,51 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .skills-education-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #skills-education {
+    padding: 2.5rem 1.25rem; /* Reduce el padding excesivo de 6rem */
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .skills-column {
+    gap: 1.5rem;
+  }
+
+  .skill-chips {
+    gap: 0.5rem;
+  }
+
+  .chip {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .education-card {
+    padding: 1.5rem; /* Ajusta el espacio interno de la tarjeta */
+    border-radius: 12px;
+  }
+
+  .edu-item {
+    gap: 0.75rem;
+  }
+
+  .edu-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
