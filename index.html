@@ -18,19 +18,26 @@
 
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav>
-    <div class="nav-brand">Sofia Rojas</div>
-    <ul class="nav-links">
-      <li><a href="#hero">Inicio</a></li>
-      <li><a href="#skills-education">Habilidades</a></li>
-      <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#contact">Contacto</a></li>
-      <li><a href="CV_I_Sofia_Rojas.pdf" class="nav-cv" download>↓ CV</a></li>
-    </ul>
-  </nav>
-
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-brand">Sofia Rojas</div>
+ 
+   <button class="hamburger" id="hamburger" type="button">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+ 
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Inicio</a></li>
+    <li><a href="#skills-education">Habilidades</a></li>
+    <li><a href="#projects">Proyectos</a></li>
+    <li><a href="#about">Sobre mí</a></li>
+    <li><a href="#contact">Contacto</a></li>
+    <li><a href="CV_I_Sofia_Rojas.pdf" class="nav-cv" download>↓ CV</a></li>
+  </ul>
+ 
+</nav>
   <!-- HERO SECTION -->
   <section id="hero" class="hero-section">
     <div class="hero-content">
@@ -110,47 +117,46 @@
   </div>
 </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <div class="about-info">
-      <div class="about-avatar">👩🏻‍💻</div>
-      <div class="about-content">
-        <h2>Sobre mí</h2>
-        <p>
-          Soy <strong>Sofía Rojas</strong>, desarrolladora frontend apasionada por crear interfaces digitales que impacten. Con formación en Informática y múltiples certificaciones en tecnologías modernas, combino conocimiento técnico con atención al detalle.
-        </p>
-        <p>
-          Mi especialidad es transformar requisitos complejos en soluciones intuitivas y escalables. Trabajo con React, JavaScript moderno y CSS3, siempre pensando en el usuario final y siguiendo buenas prácticas de accesibilidad y código limpio.
-        </p>
-        <p>
-          Residente de Venezuela, disponible para proyectos remotos. Me encanta aprender nuevas tecnologías y colaborar en equipos de alto rendimiento.
-        </p>
+<!-- ABOUT SECTION -->
+<section id="about">
+  <div class="about-info">
+    <div class="about-avatar">👩🏻‍💻</div>
+    <div class="about-content">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy <strong>Sofía Rojas</strong>, desarrolladora frontend apasionada por crear interfaces digitales que impacten. Con formación en Informática y múltiples certificaciones en tecnologías modernas, combino conocimiento técnico con atención al detalle.
+      </p>
+      <p>
+        Mi especialidad es transformar requisitos complejos en soluciones intuitivas y escalables. Trabajo con React, JavaScript moderno y CSS3, siempre pensando en el usuario final y siguiendo buenas prácticas de accesibilidad y código limpio.
+      </p>
+      <p>
+        Residente de Venezuela, disponible para proyectos remotos. Me encanta aprender nuevas tecnologías y colaborar en equipos de alto rendimiento.
+      </p>
     </div>
-   </div>
+  </div> <!-- Cierre de .about-info aquí -->
 
-
-      <div class="about-meta">
-        <div class="meta-item">
-          <p class="meta-label">Ubicación</p>
-          <p class="meta-value">Venezuela 🇻🇪</p>
-        </div>
-        <div class="meta-item">
-          <p class="meta-label">Disponibilidad</p>
-          <p class="meta-value">Remoto</p>
-          <p class="meta-value">Presencial</p>
-        </div>
-        <div class="meta-item">
-          <p class="meta-label">Idiomas</p>
-          <p class="meta-value">· Español (Nativo) </p>
-          <p class="meta-value">· Inglés (Básico)</p>
-        </div>
-        <div class="meta-item">
-          <p class="meta-label">Enfoque</p>
-          <p class="meta-value">· React · JavaScript</p>
-          <p class="meta-value">· JavaScript</p>
-        </div>
-      </div>
-  </section>
+  <div class="about-meta">
+    <div class="meta-item">
+      <p class="meta-label">Ubicación</p>
+      <p class="meta-value">Venezuela 🇻🇪</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Disponibilidad</p>
+      <p class="meta-value">Remoto</p>
+      <p class="meta-value">Presencial</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Idiomas</p>
+      <p class="meta-value">· Español (Nativo)</p>
+      <p class="meta-value">· Inglés (Básico)</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Enfoque</p>
+      <p class="meta-value">· React</p>
+      <p class="meta-value">· JavaScript</p>
+    </div>
+  </div>
+</section>
 
   <!-- CONTACT SECTION -->
   <section id="contact">
@@ -183,5 +189,7 @@
   <script src="js/render-projects.js"></script>
   <script src="js/skills-data.js"></script>
   <script src="js/skills-render.js"></script>
+
+  <script src="js/responsive.js"></script>
 </body>
 </html>
