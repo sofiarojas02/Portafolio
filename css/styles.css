@@ -25,7 +25,8 @@
       background: linear-gradient(135deg, var(--bg-primary) 0%, #0a1420 100%);
       color: var(--text-primary);
       line-height: 1.6;
-      max-width: 100%;
+      width: 100%;
+      max-width: 1200px;
       margin: 0;
       padding: 0;
       overflow-x: hidden;

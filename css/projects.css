@@ -209,3 +209,37 @@
   .prev-btn { left: 0; }
   .next-btn { right: 0; }
 }
+
+
+
+
+/* AJUSTES RESPONSIVE PARA EL CARRUSEL */
+@media (max-width: 640px) {
+  #projects {
+    padding: 3rem 1.2rem;
+    margin: 2rem 0.5rem;
+  }
+
+  .projects-carousel-wrapper {
+    padding: 0 1rem;
+  }
+
+  .project-card {
+    flex: 0 0 100%; /* Muestra solo 1 proyecto en pantallas pequeñas */
+  }
+
+  /* Posicionamiento de flechas para que no tapen el contenido */
+  .prev-btn {
+    left: -10px;
+  }
+
+  .next-btn {
+    right: -10px;
+  }
+
+  .carousel-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+  }
+}
